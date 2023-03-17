@@ -1,0 +1,676 @@
+@import url(../styles/reset.css);
+@import url(../styles/fonts.css);
+@import url(../styles/colors.css);
+@import url(../styles/scroll.css);
+
+body {
+    width: 90vw;
+    margin: 60px auto 0px;
+    background-color: #000000;
+    /* overflow: hidden; */
+}
+
+.header {
+    width: 100%;
+    display: grid;
+    gap: 0.75vw;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.letter {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(90vw / 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--red-color);
+    font-family: "SweaterDresses";
+    font-size: calc(50vw / 10);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--white-color);
+    text-align: center;
+}
+
+.icon {
+    border: none;
+}
+
+.icon > img {
+    width: calc(90vw / 10);
+}
+
+.headerTwo {
+    width: 100%;
+    height: max-content;
+    margin-top: 30px;
+    border: 2px solid var(--green-color);
+}
+
+.headerTwo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px;
+    animation: blink 1s step-start infinite;
+}
+.textOne,
+.textTwo {
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+/* Infection section */
+
+.infection {
+    margin-top: 30px;
+    display: grid;
+    gap: 2vw;
+    height: 500px; /* media query */
+    grid-template-columns: repeat(5, 1fr);
+    border: 2px solid var(--green-color);
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.systemElement {
+    width: 100%;
+    height: 100%;
+    background-color: var(--green-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.systemElement > img {
+    width: 60%;
+    height: 60%;
+}
+
+.span-row-2 {
+    grid-row: span 2;
+}
+
+.move-down {
+    order: 5;
+}
+.move-down-2 {
+    order: 8;
+}
+
+.order-first {
+    order: -1;
+}
+.order-second {
+    order: 2 / 7;
+}
+.order-third {
+    order: 4 / 9;
+}
+
+/* Section with encryption */
+
+.encryption {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    width: 100%;
+    height: 43.91vw;
+    margin-top: 30px;
+}
+
+.enc-letters {
+    grid-row: span 2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    border: 0.15vw solid var(--green-color);
+}
+
+.enc-letter {
+    font-family: "SweaterDresses";
+    -webkit-text-stroke-width: 0.2vw;
+    -webkit-text-stroke-color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1vw solid var(--green-color);
+    font-size: 7vw;
+}
+
+.encAllButtons {
+    border: 2px solid var(--green-color);
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+}
+
+.encButtons {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.encBtn {
+    border: 0.1vw solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.encBtn:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
+.encPanel {
+    border: 0.1vw solid var(--green-color);
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    line-height: 150%;
+    justify-content: space-between;
+}
+
+.encPanel > p {
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: white;
+}
+
+.encProgress {
+    border: 0.1vw solid var(--green-color);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+    padding: 2vw;
+}
+
+.encProgress > p {
+    box-sizing: border-box;
+    color: white;
+    font-family: "Pixelmix";
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+
+.encBar1 {
+    border: 0.1vw solid var(--green-color);
+}
+
+.encBarFull-1 {
+    width: 1%;
+    height: 100%;
+    background-color: var(--green-color);
+}
+
+.encBar2 {
+    border: 0.1vw solid var(--green-color);
+}
+
+.encBarFull-2 {
+    width: 1%;
+    height: 100%;
+    background-color: var(--green-color);
+}
+
+/* Pressure section */
+
+.pressure {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 30px;
+}
+
+.pressurePanel {
+    grid-column: span 4;
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: repeat(6, 1fr);
+    border: 0.1vw solid var(--green-color);
+    padding: 15px;
+}
+
+.pressurePanelAnim {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.pressureBars {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+}
+
+.pressureBar > img {
+    width: 100%;
+    height: 100%;
+}
+
+.pressureInfo {
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1vw;
+}
+
+.pressureInfo > p {
+    color: white;
+    font-family: "Pixelmix";
+    font-size: 1.8vw;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: start;
+}
+
+.pressureButtons {
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2vw;
+    border: 0.1vw solid var(--green-color);
+    padding: 2vw;
+}
+
+.pressureButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1vw solid var(--white-color);
+    color: var(--white-color);
+    font-family: "Pixelmix";
+    font-size: 2.5vw;
+    text-transform: uppercase;
+}
+
+.pressureButton:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
+/* Chip section */
+
+.chip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin-top: 30px;
+}
+
+.board {
+    box-sizing: border-box;
+    width: 100%;
+    height: 35vw;
+    position: relative;
+    padding: 0.1vw;
+    border: 0.1vw solid var(--green-color);
+}
+
+.blueWires {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.redWires {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 95;
+}
+
+.shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+
+.blueWires > img {
+    width: 100%;
+    height: 100%;
+}
+.redWires > img {
+    width: 100%;
+    height: 100%;
+}
+.shapes > img {
+    width: 100%;
+    height: 100%;
+}
+
+.chipButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2vw;
+    padding: 2vw;
+    border: 0.1vw solid var(--green-color);
+}
+
+.chipButton {
+    border: 0.1vw solid var(--white-color);
+    color: white;
+    font-family: "Pixelmix";
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2vw;
+}
+
+.chipButton:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
+.chipButton:nth-child(1) {
+    order: 0;
+}
+
+.chipButton:nth-child(2) {
+    order: 2;
+}
+
+.chipButton:nth-child(4) {
+    order: 3;
+}
+
+.chipButton:nth-child(5) {
+    order: 5;
+}
+
+.chipButton:nth-child(3) {
+    grid-row: span 2;
+    order: 1;
+}
+
+.chipButton:nth-child(6) {
+    grid-row: span 2;
+    order: 4;
+}
+
+/* Section timer */
+
+.timer {
+    margin-top: 30px;
+    height: 20vw;
+    background-color: var(--red-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vw;
+}
+
+.time {
+    color: var(--white-color);
+    font-family: "Pixelmix";
+    text-transform: uppercase;
+    font-size: 3vw;
+}
+
+.timerTime {
+    font-size: 8vw;
+}
+
+/* Funds section */
+
+.funds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin-top: 30px;
+}
+
+.accounts {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1vw;
+}
+
+.account {
+    border: 0.1vw solid var(--white-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+}
+
+.account:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
+.account > p {
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.account:hover p {
+    color: #000000;
+}
+.transferred {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2vw;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    border: 0.1vw solid var(--green-color);
+}
+
+.fundsHeader {
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-align: center;
+    padding: 1vw 2vw;
+    border: 0.1vw solid var(--green-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.address > p {
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.output {
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1vw solid var(--green-color);
+    font-family: "Pixelmix";
+    font-size: 3vw;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--green-color);
+}
+
+/* Memory section */
+
+.memory {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin-top: 30px;
+}
+
+.registers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2vw;
+    padding: 2vw;
+    border: 0.1vw solid var(--green-color);
+}
+
+.register {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background-color: var(--green-color);
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    padding: 1vw 0;
+}
+
+.memoryButtons {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2vw;
+    border: 0.1vw solid var(--green-color);
+    padding: 2vw;
+}
+
+.memoryButton {
+    border: 0.1vw solid var(--white-color);
+    color: var(--white-color);
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memoryButton:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
+/* Footer section */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    padding: 2vw;
+    border: 0.1vw solid var(--green-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footerHeader {
+    grid-column: span 2;
+    color: var(--white-color);
+    font-family: "Pixelmix";
+    font-size: 4vw;
+    text-transform: uppercase;
+    line-height: 150%;
+}
+
+.footerImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerImage > img {
+    width: 55%;
+    height: 55%;
+    animation: heartbeat 1s step-start infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.75);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.75);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(0.75);
+    }
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footerInfo > p {
+    color: var(--white-color);
+    text-align: end;
+    font-family: "Pixelmix";
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.btnColorChanged {
+    background: #00ff38;
+    color: #000000;
+    border: none;
+}
+
+.btnColorChanged > p {
+    color: #000000;
+}

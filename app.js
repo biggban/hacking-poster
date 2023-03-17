@@ -188,7 +188,7 @@ pressureDec[0].addEventListener("click", () => {
     } else {
         counter -= 1;
         Array.from(pressureImg).forEach((img) => {
-            img.src = `svg/pressure-${counter}.svg`;
+            img.src = `.../svg/pressure-${counter}.svg`;
         });
     }
 });
@@ -201,7 +201,7 @@ pressureInc[0].addEventListener("click", () => {
     } else {
         counter += 1;
         Array.from(pressureImg).forEach((img) => {
-            img.src = `/hacking-poster/svg/pressure-${counter}.svg`;
+            img.src = `.../svg/pressure-${counter}.svg`;
         });
         console.log(counter);
     }

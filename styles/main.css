@@ -518,6 +518,12 @@ body {
     justify-content: center;
 }
 
+.fundsHeader:hover {
+    background-color: var(--green-color);
+    color: #000000;
+    border: none;
+}
+
 .address > p {
     font-family: "Pixelmix";
     font-size: 2vw;

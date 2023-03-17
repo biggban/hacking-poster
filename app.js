@@ -188,7 +188,7 @@ pressureDec[0].addEventListener("click", () => {
     } else {
         counter -= 1;
         Array.from(pressureImg).forEach((img) => {
-            img.src = `svg/pressure-${counter}.svg`;
+            img.src = `/svg/pressure-${counter}.svg`;
         });
     }
 });
@@ -201,7 +201,7 @@ pressureInc[0].addEventListener("click", () => {
     } else {
         counter += 1;
         Array.from(pressureImg).forEach((img) => {
-            img.src = `svg/pressure-${counter}.svg`;
+            img.src = `/svg/pressure-${counter}.svg`;
         });
         console.log(counter);
     }
@@ -336,10 +336,10 @@ let timerIntervar = setInterval(() => {
 
 timer();
 
-let fundsHeader = document.getElementsByClassName("fundsHeader")[0];
+let fundsHeader = document.getElementsByClassName("fundsHeader");
 let outputMessage = document.getElementsByClassName("output")[0];
 let yourAccount = document.getElementById("yourAccount");
-
+changeColorButtons(fundsHeader);
 let funds = 0;
 let fundsOutput = "";
 
@@ -359,7 +359,7 @@ Array.from(account).forEach((acc) => {
     });
 });
 
-fundsHeader.addEventListener("click", () => {
+fundsHeader[0].addEventListener("click", () => {
     if (funds >= 1000000) {
         outputMessage.innerText = "funds transferred!";
         outputMessage.style.color = "#00FF38";
@@ -368,7 +368,6 @@ fundsHeader.addEventListener("click", () => {
         outputMessage.style.color = "red";
     }
 });
-changeColorButtons(fundsHeader);
 
 // Register section
 
